@@ -7,8 +7,14 @@ namespace ColorSwitch
 
         public Transform player;
 
+        // ------------------------------------------------- //
+
         void Update()
         {
+
+            if (player == null)
+                return;
+
             Vector3 camPos = transform.position;
             Vector3 playerPos = player.position;
             if (playerPos.y > camPos.y)
